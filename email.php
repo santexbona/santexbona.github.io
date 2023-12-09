@@ -1,6 +1,6 @@
 <?php
 $subject = 'You Got Message'; // Subject of your email
-$to = 'ikyohiabonaventure@gmail.com';  //Recipient's E-mail
+$to = "ikyohiabonaventure@gmail.com";  //Recipient's E-mail
 $emailTo = $_REQUEST['email'];
 
 $name = $_REQUEST['name'];
