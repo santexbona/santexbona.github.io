@@ -1,32 +1,17 @@
 <?php
-$subject = 'from the website'; // Subject of your email
-$to = "ikyohiabonaventure@gmail.com";  //Recipient's E-mail
 
-$name = $_REQUEST['name'];
-$email = $_REQUEST['email'];
-$phone = $_REQUEST['phone'];
-$msg = $_REQUEST['message'];
+$to = "ikyohiabonaventure@gmail.com"; 
 
-$email_from = $name.'<'.$email.'>';
+$subject = 'Test email';
 
-$headers = "MIME-Version: 1.1";
-$headers .= "Content-type: text/html; charset=iso-8859-1";
-$headers .= "From: ".$name.'<'.$email.'>'."\r\n";
-$headers .= "Return-Path: ".$email."\r\n";
+$message = 'Message body';
 
-$message .= 'Name : ' . $name . "\n";
-$message .= 'Email : ' . $email . "\n";
-$message .= 'Phone : ' . $phone . "\n";
-$message .= 'Message : ' . $msg;
+$headers = "From: web@example.com\r\n";
 
-if (@mail($to, $subject, $message, $email_from))
-{
-	// Transfer the value 'sent' to ajax function for showing success message.
-	echo 'sent';
+if(mail($to, $subject, $message, $headers)) {
+  echo 'Email sent';
+} else {
+  echo 'Email failed';
 }
-else
-{
-	// Transfer the value 'failed' to ajax function for showing error message.
-	echo 'failed';
-}
+
 ?>
