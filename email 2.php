@@ -1,6 +1,7 @@
 <?php
 $subject = 'from the website'; // Subject of your email
 $to = "ikyohiabonaventure@gmail.com";  //Recipient's E-mail
+$emailTo = $_REQUEST['email'];
 
 $name = $_REQUEST['name'];
 $email = $_REQUEST['email'];
@@ -11,8 +12,8 @@ $email_from = $name.'<'.$email.'>';
 
 $headers = "MIME-Version: 1.1";
 $headers .= "Content-type: text/html; charset=iso-8859-1";
-$headers .= "From: ".$name.'<'.$email.'>'."\r\n";
-$headers .= "Return-Path: ".$email."\r\n";
+$headers .= "From: ".$name.'<'.$email.'>'."\r\n"; // Sender's E-mail
+$headers .= "Return-Path:"."From:" . $email;
 
 $message .= 'Name : ' . $name . "\n";
 $message .= 'Email : ' . $email . "\n";
