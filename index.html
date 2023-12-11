@@ -641,24 +641,45 @@
                     </form>
                     <div>
                         
-                        <div class="row mt-4 mb-4">
-                            <div class="col-md-6 my-3">
-                              <div class="card">
-                                <div class="card-header">scholastic</div>
-                                <div class="card-body">
-                                  <h5 class="card-title">bonaventure</h5>
-                                  <p class="card-text">
-                                   testint the calender appointment form
+                        <div class="container px-3 my-5">
+                            <main>
+                              <div class="row">
+                                <div class="col-md-6 my-auto">
+                                  <h1 class="display-4">BONAVENTURE</h1>
+                                  <p class="lead">
+                                    Select a date and time to
+                                    <strong>book an appointment</strong> with us out.
+                                    <a href="https://bona.dayschedule.com">
+                                      See documentation &rarr;
+                                    </a>
                                   </p>
-                                  <button
-                                    class="btn btn-primary"
-                                    onclick="openDaySchedule('https://meet.dayschedule.com')"
-                                  >
-                                    Book appointment
-                                  </button>
+                                </div>
+                                <div class="col-md-6">
+                                  <img
+                                    src="images/background/4.jpg"
+                                    class="img-fluid"
+                                  />
                                 </div>
                               </div>
-                            </div>
+                      
+                              <div class="row mt-4 mb-4">
+                                <div class="col-12">
+                                  <!-- Widget code -->
+                      
+                                  <dayschedule-widget
+                                    url="https://bona.dayschedule.com">"
+                                    options='{ "color": {
+                                     "primary": "#0f0980",
+                                     "secondary": "#afeefe"
+                                   }, 
+                                  "hideHeader": true
+                                 }'
+                                  >
+                                  </dayschedule-widget>
+                                  <!-- Widget code -->
+                                </div>
+                              </div>
+                            </main>
                           </div>
 
                     </div>
