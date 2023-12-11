@@ -12804,7 +12804,8 @@ body.de_light::-webkit-scrollbar-thumb {
 
 
 
-{box-sizing: border-box;}
+
+* {box-sizing: border-box;}
 .card-header * {list-style-type: none;}
 
 .required:after{
